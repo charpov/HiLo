@@ -145,7 +145,7 @@ object HiLo:
       while !hilo.solved do
          val choices = hilo.choices
          val question =
-            if choices.sizeIs == 1 then s"Is your number ${choices.head} ? "
+            if choices.size == 1 then s"Is your number ${choices.head} ? "
             else s"Is your number between ${choices.head} and ${choices.last} ? "
          if getReply(question) then hilo.yes() else hilo.no()
          println(f"I'm ${hilo.progress * 100.0}%.0f%% done.")

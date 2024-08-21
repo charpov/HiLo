@@ -157,7 +157,8 @@ public final class HiLo {
       var choices = hilo.choices();
       int min = choices.getMinimum();
       int max = choices.getMaximum();
-      var question = (max == min) ? "Is your number %d ? ".formatted(min)
+      var question =
+          (max == min) ? "Is your number %d ? ".formatted(min)
           : "Is your number between %d and %d ? ".formatted(min, max);
       System.out.print(question);
       var ans = yesOrNo(stdin.nextLine());
